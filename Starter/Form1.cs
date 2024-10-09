@@ -14,7 +14,7 @@ namespace Starter
 
         private void btnClickMe_Click(object sender, EventArgs e)
         {
-            lblClickCounter.Text = "Hallo Magnus!";
+            lblClickCounter.Text = "Hallo Magnus!!!!!!";
         }
     }
 }
