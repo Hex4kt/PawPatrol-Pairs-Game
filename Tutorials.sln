@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starter", "Starter\Starter.csproj", "{28AEFF80-C3DC-42B7-88E3-D81EEBCAAD6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureViewer\PictureViewer.csproj", "{F30697EB-537B-4055-B806-4DB6C75C2D48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{28AEFF80-C3DC-42B7-88E3-D81EEBCAAD6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28AEFF80-C3DC-42B7-88E3-D81EEBCAAD6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28AEFF80-C3DC-42B7-88E3-D81EEBCAAD6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30697EB-537B-4055-B806-4DB6C75C2D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30697EB-537B-4055-B806-4DB6C75C2D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30697EB-537B-4055-B806-4DB6C75C2D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30697EB-537B-4055-B806-4DB6C75C2D48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
