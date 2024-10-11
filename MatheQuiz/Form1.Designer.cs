@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblVerbleibeneZeit = new System.Windows.Forms.Label();
             this.lblLeftNumber = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@
             this.numErgebnis2 = new System.Windows.Forms.NumericUpDown();
             this.numErgebnis3 = new System.Windows.Forms.NumericUpDown();
             this.numErgebnis4 = new System.Windows.Forms.NumericUpDown();
+            this.startQuiz = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numErgebnis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numErgebnis2)).BeginInit();
@@ -84,7 +87,6 @@
             this.lblLeftNumber.TabIndex = 2;
             this.lblLeftNumber.Text = "?";
             this.lblLeftNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLeftNumber.Click += new System.EventHandler(this.lblLeftNumber_Click);
             // 
             // lblOperator
             // 
@@ -123,7 +125,6 @@
             this.numErgebnis.Name = "numErgebnis";
             this.numErgebnis.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis.TabIndex = 1;
-            this.numErgebnis.ValueChanged += new System.EventHandler(this.numErgebnis_ValueChanged);
             // 
             // lblLeftNumber2
             // 
@@ -252,7 +253,6 @@
             this.numErgebnis2.Name = "numErgebnis2";
             this.numErgebnis2.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis2.TabIndex = 2;
-            this.numErgebnis2.ValueChanged += new System.EventHandler(this.numErgebnis2_ValueChanged);
             // 
             // numErgebnis3
             // 
@@ -270,15 +270,30 @@
             this.numErgebnis4.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis4.TabIndex = 4;
             // 
+            // startQuiz
+            // 
+            this.startQuiz.AutoSize = true;
+            this.startQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startQuiz.Location = new System.Drawing.Point(189, 300);
+            this.startQuiz.Name = "startQuiz";
+            this.startQuiz.Size = new System.Drawing.Size(124, 34);
+            this.startQuiz.TabIndex = 0;
+            this.startQuiz.Text = "Quiz starten!";
+            this.startQuiz.UseVisualStyleBackColor = true;
+            this.startQuiz.Click += new System.EventHandler(this.startQuiz_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // button1
             // 
-            this.button1.AutoSize = true;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(189, 300);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Quiz starten!";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Mathequiz
@@ -287,6 +302,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.startQuiz);
             this.Controls.Add(this.numErgebnis4);
             this.Controls.Add(this.numErgebnis3);
             this.Controls.Add(this.numErgebnis2);
@@ -346,6 +362,8 @@
         private System.Windows.Forms.NumericUpDown numErgebnis2;
         private System.Windows.Forms.NumericUpDown numErgebnis3;
         private System.Windows.Forms.NumericUpDown numErgebnis4;
+        private System.Windows.Forms.Button startQuiz;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
     }
 }

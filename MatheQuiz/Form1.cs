@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MatheQuiz
 {
     public partial class Mathequiz : Form
     {
+        // Zufallszahl für Aufgaben
         Random randomizer = new Random();
 
         // Zahlen für Additionsaufgabe
@@ -30,6 +24,13 @@ namespace MatheQuiz
         int divNumber1;
         int divNumber2;
 
+        // Verbleibene Zeit
+        int timeLeft;
+
+        public Mathequiz()
+        {
+            InitializeComponent();
+        }
         public void StartTheQuiz()
         {
             // Additionsproblem
@@ -54,30 +55,57 @@ namespace MatheQuiz
             numErgebnis3.Value = 0;
 
             // Divisionsproblem
-            divNumber1 = randomizer.Next(1, 20);
-            divNumber2 = randomizer.Next(3, divNumber1);
+            divNumber2 = randomizer.Next(1, 11);
+            int tempDivNumber = randomizer.Next(1, 11);
+            divNumber1 = divNumber2 * tempDivNumber;
             lblLeftNumber4.Text = divNumber1.ToString();
             lblRightNumber4.Text = divNumber2.ToString();
             numErgebnis4.Value = 0;
+
+            // Timer starten
+            timeLeft = 30;
+            lblTime.Text = timeLeft.ToString() + " seconds";
+            timer1.Start();
         }
-        public Mathequiz()
+        private bool CheckAntworten()
         {
-            InitializeComponent();
+            if (addNumber1 + addNumber2 == numErgebnis.Value
+                && subNumber1 - subNumber2 == numErgebnis2.Value
+                && multNumber1 * multNumber2 == numErgebnis3.Value
+                && divNumber1 / divNumber2 == numErgebnis4.Value)
+                return true;
+            else 
+                return false;
         }
-
-        private void lblLeftNumber_Click(object sender, EventArgs e)
+        private void startQuiz_Click(object sender, EventArgs e)
         {
-
+            StartTheQuiz();
+            startQuiz.Enabled = false;
         }
-
-        private void numErgebnis_ValueChanged(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
-        }
-
-        private void numErgebnis2_ValueChanged(object sender, EventArgs e)
-        {
-
+            if (CheckAntworten())
+            {
+                timer1.Stop();
+                MessageBox.Show("Richtig!");
+                startQuiz.Enabled = true;
+            }
+            else if (timeLeft > 0) 
+            {
+                timeLeft -= 1;
+                lblTime.Text = timeLeft + " seconds";
+            }
+            else
+            {
+                timer1.Stop();
+                lblTime.Text = "Zeit abgelaufen!";
+                MessageBox.Show("Die zeit ist abgelaufen, versuchs nochmal!");
+                numErgebnis.Value = addNumber1 + addNumber2;
+                numErgebnis2.Value = subNumber1 - subNumber2;
+                numErgebnis3.Value = multNumber1 * multNumber2;
+                numErgebnis4.Value = divNumber1 / divNumber2;
+                startQuiz.Enabled = true;
+            }
         }
     }
 }
