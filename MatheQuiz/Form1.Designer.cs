@@ -53,7 +53,6 @@
             this.numErgebnis4 = new System.Windows.Forms.NumericUpDown();
             this.startQuiz = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numErgebnis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numErgebnis2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numErgebnis3)).BeginInit();
@@ -287,21 +286,11 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Mathequiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.startQuiz);
             this.Controls.Add(this.numErgebnis4);
             this.Controls.Add(this.numErgebnis3);
@@ -364,7 +353,6 @@
         private System.Windows.Forms.NumericUpDown numErgebnis4;
         private System.Windows.Forms.Button startQuiz;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
     }
 }
 
