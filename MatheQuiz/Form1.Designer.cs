@@ -67,6 +67,7 @@
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(200, 30);
             this.lblTime.TabIndex = 0;
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
             // lblVerbleibeneZeit
             // 
@@ -124,6 +125,7 @@
             this.numErgebnis.Name = "numErgebnis";
             this.numErgebnis.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis.TabIndex = 1;
+            this.numErgebnis.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // lblLeftNumber2
             // 
@@ -252,6 +254,7 @@
             this.numErgebnis2.Name = "numErgebnis2";
             this.numErgebnis2.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis2.TabIndex = 2;
+            this.numErgebnis2.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // numErgebnis3
             // 
@@ -260,6 +263,7 @@
             this.numErgebnis3.Name = "numErgebnis3";
             this.numErgebnis3.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis3.TabIndex = 3;
+            this.numErgebnis3.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // numErgebnis4
             // 
@@ -268,6 +272,7 @@
             this.numErgebnis4.Name = "numErgebnis4";
             this.numErgebnis4.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis4.TabIndex = 4;
+            this.numErgebnis4.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // startQuiz
             // 

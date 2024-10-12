@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace MatheQuiz
@@ -49,7 +50,7 @@ namespace MatheQuiz
 
             // Multiplikationsproblem
             multNumber1 = randomizer.Next(1, 11);
-            multNumber2 = randomizer.Next(2, multNumber1);
+            multNumber2 = randomizer.Next(1, multNumber1);
             lblLeftNumber3.Text = multNumber1.ToString();
             lblRightNumber3.Text = multNumber2.ToString();
             numErgebnis3.Value = 0;
@@ -63,7 +64,7 @@ namespace MatheQuiz
             numErgebnis4.Value = 0;
 
             // Timer starten
-            timeLeft = 30;
+            timeLeft = 6;
             lblTime.Text = timeLeft.ToString() + " seconds";
             timer1.Start();
         }
@@ -79,6 +80,7 @@ namespace MatheQuiz
         }
         private void startQuiz_Click(object sender, EventArgs e)
         {
+            lblTime.BackColor = DefaultBackColor;
             StartTheQuiz();
             startQuiz.Enabled = false;
         }
@@ -94,18 +96,41 @@ namespace MatheQuiz
             {
                 timeLeft -= 1;
                 lblTime.Text = timeLeft + " seconds";
+                if (timeLeft <= 5)
+                {
+                    lblTime.BackColor = Color.Orange;
+                }
             }
             else
             {
                 timer1.Stop();
+                lblTime.BackColor = Color.Red;
                 lblTime.Text = "Zeit abgelaufen!";
-                MessageBox.Show("Die zeit ist abgelaufen, versuchs nochmal!");
+                this.ActiveControl = null;
                 numErgebnis.Value = addNumber1 + addNumber2;
                 numErgebnis2.Value = subNumber1 - subNumber2;
                 numErgebnis3.Value = multNumber1 * multNumber2;
                 numErgebnis4.Value = divNumber1 / divNumber2;
+                MessageBox.Show("Die zeit ist abgelaufen, versuchs nochmal!");
                 startQuiz.Enabled = true;
             }
+        }
+
+        private void answer_Enter(object sender, EventArgs e)
+        {
+            NumericUpDown answerBox = sender as NumericUpDown;
+
+            if (answerBox != null)
+            {
+                int lengthOfAnswer = answerBox.Value.ToString().Length;
+                answerBox.Select(0, lengthOfAnswer);
+            }
+
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
