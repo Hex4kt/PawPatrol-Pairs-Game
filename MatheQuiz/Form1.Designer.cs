@@ -53,6 +53,10 @@
             this.numErgebnis4 = new System.Windows.Forms.NumericUpDown();
             this.startQuiz = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.korrektIndikator = new System.Windows.Forms.Label();
+            this.korrekt2Indikator = new System.Windows.Forms.Label();
+            this.korrekt3Indikator = new System.Windows.Forms.Label();
+            this.korrekt4Indikator = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numErgebnis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numErgebnis2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numErgebnis3)).BeginInit();
@@ -67,7 +71,6 @@
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(200, 30);
             this.lblTime.TabIndex = 0;
-            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
             // lblVerbleibeneZeit
             // 
@@ -125,6 +128,7 @@
             this.numErgebnis.Name = "numErgebnis";
             this.numErgebnis.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis.TabIndex = 1;
+            this.numErgebnis.ValueChanged += new System.EventHandler(this.answer_Changed);
             this.numErgebnis.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // lblLeftNumber2
@@ -254,6 +258,7 @@
             this.numErgebnis2.Name = "numErgebnis2";
             this.numErgebnis2.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis2.TabIndex = 2;
+            this.numErgebnis2.ValueChanged += new System.EventHandler(this.answer_Changed);
             this.numErgebnis2.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // numErgebnis3
@@ -263,6 +268,7 @@
             this.numErgebnis3.Name = "numErgebnis3";
             this.numErgebnis3.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis3.TabIndex = 3;
+            this.numErgebnis3.ValueChanged += new System.EventHandler(this.answer_Changed);
             this.numErgebnis3.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // numErgebnis4
@@ -272,6 +278,7 @@
             this.numErgebnis4.Name = "numErgebnis4";
             this.numErgebnis4.Size = new System.Drawing.Size(100, 35);
             this.numErgebnis4.TabIndex = 4;
+            this.numErgebnis4.ValueChanged += new System.EventHandler(this.answer_Changed);
             this.numErgebnis4.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // startQuiz
@@ -291,11 +298,51 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // korrektIndikator
+            // 
+            this.korrektIndikator.AutoSize = true;
+            this.korrektIndikator.Location = new System.Drawing.Point(425, 98);
+            this.korrektIndikator.Name = "korrektIndikator";
+            this.korrektIndikator.Size = new System.Drawing.Size(37, 13);
+            this.korrektIndikator.TabIndex = 19;
+            this.korrektIndikator.Text = "          ";
+            // 
+            // korrekt2Indikator
+            // 
+            this.korrekt2Indikator.AutoSize = true;
+            this.korrekt2Indikator.Location = new System.Drawing.Point(425, 151);
+            this.korrekt2Indikator.Name = "korrekt2Indikator";
+            this.korrekt2Indikator.Size = new System.Drawing.Size(37, 13);
+            this.korrekt2Indikator.TabIndex = 20;
+            this.korrekt2Indikator.Text = "          ";
+            // 
+            // korrekt3Indikator
+            // 
+            this.korrekt3Indikator.AutoSize = true;
+            this.korrekt3Indikator.Location = new System.Drawing.Point(425, 201);
+            this.korrekt3Indikator.Name = "korrekt3Indikator";
+            this.korrekt3Indikator.Size = new System.Drawing.Size(37, 13);
+            this.korrekt3Indikator.TabIndex = 21;
+            this.korrekt3Indikator.Text = "          ";
+            // 
+            // korrekt4Indikator
+            // 
+            this.korrekt4Indikator.AutoSize = true;
+            this.korrekt4Indikator.Location = new System.Drawing.Point(425, 248);
+            this.korrekt4Indikator.Name = "korrekt4Indikator";
+            this.korrekt4Indikator.Size = new System.Drawing.Size(37, 13);
+            this.korrekt4Indikator.TabIndex = 22;
+            this.korrekt4Indikator.Text = "          ";
+            // 
             // Mathequiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.korrekt4Indikator);
+            this.Controls.Add(this.korrekt3Indikator);
+            this.Controls.Add(this.korrekt2Indikator);
+            this.Controls.Add(this.korrektIndikator);
             this.Controls.Add(this.startQuiz);
             this.Controls.Add(this.numErgebnis4);
             this.Controls.Add(this.numErgebnis3);
@@ -358,6 +405,10 @@
         private System.Windows.Forms.NumericUpDown numErgebnis4;
         private System.Windows.Forms.Button startQuiz;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label korrektIndikator;
+        private System.Windows.Forms.Label korrekt2Indikator;
+        private System.Windows.Forms.Label korrekt3Indikator;
+        private System.Windows.Forms.Label korrekt4Indikator;
     }
 }
 

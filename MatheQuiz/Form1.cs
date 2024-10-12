@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 
 namespace MatheQuiz
@@ -128,9 +129,18 @@ namespace MatheQuiz
 
         }
 
-        private void lblTime_Click(object sender, EventArgs e)
+        private void answer_Changed(object sender, EventArgs e)
         {
-
+            NumericUpDown numFeld = sender as NumericUpDown;
+            decimal numErgebnis = numFeld.Value;
+            if (numErgebnis == addNumber1 + addNumber2)
+                korrektIndikator.Text = "√";
+            if (numErgebnis == subNumber1 - subNumber2)
+                korrekt2Indikator.Text = "√";
+            if (numErgebnis == multNumber1 * multNumber2)
+                korrekt3Indikator.Text = "√";
+            if (numErgebnis == divNumber1 / divNumber2)
+                korrekt4Indikator.Text = "√";
         }
     }
 }
