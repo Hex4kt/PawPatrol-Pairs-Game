@@ -82,6 +82,13 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Icons\Bloodrage.ico" />
+    <Content Include="Icons\canine.ico" />
+    <Content Include="Icons\chase.ico" />
+    <Content Include="Icons\dad.ico" />
+    <Content Include="Icons\everest.ico" />
+    <Content Include="Icons\mom.ico" />
+    <Content Include="Icons\ryder.ico" />
+    <Content Include="Icons\zuma.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
