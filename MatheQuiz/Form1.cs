@@ -65,7 +65,7 @@ namespace MatheQuiz
             numErgebnis4.Value = 0;
 
             // Timer starten
-            timeLeft = 15;
+            timeLeft = 30;
             lblTime.Text = timeLeft.ToString() + " seconds";
             timer1.Start();
         }

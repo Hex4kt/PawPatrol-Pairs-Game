@@ -14,11 +14,15 @@ namespace VergleichsSpiel
     {
         Label firstClicked;
         Label secondClicked;
+
+        int timeUsed = 0;
         public Form1()
         {
             InitializeComponent();
 
             AssignIconsToSquares();
+
+            LabelTimer.Text = timeUsed.ToString();
         }
         // Zufallszahl um später zufällige Objekte zu wählen
         Random random = new Random();
@@ -82,7 +86,10 @@ namespace VergleichsSpiel
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Stop();
+            //timer1.Stop();
+
+            timeUsed += 1;
+            LabelTimer.Text = timeUsed.ToString();
 
             firstClicked.ForeColor = firstClicked.BackColor;
             secondClicked.ForeColor = secondClicked.BackColor;
