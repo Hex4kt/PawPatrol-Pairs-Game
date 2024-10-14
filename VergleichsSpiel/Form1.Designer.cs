@@ -293,7 +293,7 @@
             this.LabelTimer.BackColor = System.Drawing.Color.Transparent;
             this.LabelTimer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LabelTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimer.Location = new System.Drawing.Point(352, 9);
+            this.LabelTimer.Location = new System.Drawing.Point(345, 9);
             this.LabelTimer.Name = "LabelTimer";
             this.LabelTimer.Size = new System.Drawing.Size(107, 41);
             this.LabelTimer.TabIndex = 1;
@@ -303,7 +303,7 @@
             // LabelVerbleibeneZeit
             // 
             this.LabelVerbleibeneZeit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelVerbleibeneZeit.Location = new System.Drawing.Point(83, 10);
+            this.LabelVerbleibeneZeit.Location = new System.Drawing.Point(76, 10);
             this.LabelVerbleibeneZeit.Name = "LabelVerbleibeneZeit";
             this.LabelVerbleibeneZeit.Size = new System.Drawing.Size(263, 40);
             this.LabelVerbleibeneZeit.TabIndex = 2;
