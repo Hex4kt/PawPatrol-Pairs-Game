@@ -190,5 +190,26 @@ namespace VergleichsSpiel
             benutzteZeit = TimeSpan.FromSeconds(timeUsed);
             LabelTimer.Text = string.Format("{0:D2}:{1:D2}", benutzteZeit.Minutes, benutzteZeit.Seconds);
         }
+
+        bool _darkMode = false;
+        private void switchBackground_Click(object sender, EventArgs e)
+        {
+            if (_darkMode)
+            {
+                this.BackColor = Color.DarkSlateBlue;
+                LabelTimer.ForeColor = Color.White;
+                LabelVerbleibeneZeit.ForeColor = Color.White;
+                lightButton.Text = "WhiteMode";
+                _darkMode = false;
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                LabelTimer.ForeColor = Color.DarkSlateGray;
+                LabelVerbleibeneZeit.ForeColor = Color.DarkSlateGray;
+                this.lightButton.Text = "DarkMode";
+                _darkMode = true;
+            }
+        }
     } 
 }

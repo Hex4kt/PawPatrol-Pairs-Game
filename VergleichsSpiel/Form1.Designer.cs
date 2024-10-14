@@ -50,6 +50,7 @@
             this.LabelTimer = new System.Windows.Forms.Label();
             this.LabelVerbleibeneZeit = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.lightButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
@@ -291,9 +292,9 @@
             // LabelTimer
             // 
             this.LabelTimer.BackColor = System.Drawing.Color.Transparent;
-            this.LabelTimer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LabelTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimer.Location = new System.Drawing.Point(345, 9);
+            this.LabelTimer.ForeColor = System.Drawing.Color.White;
+            this.LabelTimer.Location = new System.Drawing.Point(372, 9);
             this.LabelTimer.Name = "LabelTimer";
             this.LabelTimer.Size = new System.Drawing.Size(107, 41);
             this.LabelTimer.TabIndex = 1;
@@ -303,7 +304,8 @@
             // LabelVerbleibeneZeit
             // 
             this.LabelVerbleibeneZeit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelVerbleibeneZeit.Location = new System.Drawing.Point(76, 10);
+            this.LabelVerbleibeneZeit.ForeColor = System.Drawing.Color.White;
+            this.LabelVerbleibeneZeit.Location = new System.Drawing.Point(103, 10);
             this.LabelVerbleibeneZeit.Name = "LabelVerbleibeneZeit";
             this.LabelVerbleibeneZeit.Size = new System.Drawing.Size(263, 40);
             this.LabelVerbleibeneZeit.TabIndex = 2;
@@ -314,12 +316,26 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // lightButton
+            // 
+            this.lightButton.BackColor = System.Drawing.Color.Transparent;
+            this.lightButton.FlatAppearance.BorderSize = 0;
+            this.lightButton.Location = new System.Drawing.Point(9, 10);
+            this.lightButton.Margin = new System.Windows.Forms.Padding(0);
+            this.lightButton.Name = "lightButton";
+            this.lightButton.Size = new System.Drawing.Size(77, 33);
+            this.lightButton.TabIndex = 3;
+            this.lightButton.Text = "WhiteMode";
+            this.lightButton.UseVisualStyleBackColor = false;
+            this.lightButton.Click += new System.EventHandler(this.switchBackground_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkKhaki;
+            this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(484, 541);
+            this.Controls.Add(this.lightButton);
             this.Controls.Add(this.LabelVerbleibeneZeit);
             this.Controls.Add(this.LabelTimer);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -368,6 +384,7 @@
         private System.Windows.Forms.Label LabelTimer;
         private System.Windows.Forms.Label LabelVerbleibeneZeit;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button lightButton;
     }
 }
 

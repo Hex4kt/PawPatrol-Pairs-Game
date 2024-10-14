@@ -9,6 +9,7 @@ public class SoundManager
 {
     private string _filePath;
     private SoundPlayer _wavPlayer;
+    private SoundPlayer _mp3Player;
 
     public SoundManager(string filePath)
     {
