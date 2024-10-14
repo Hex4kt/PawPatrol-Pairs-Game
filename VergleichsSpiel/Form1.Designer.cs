@@ -49,6 +49,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LabelTimer = new System.Windows.Forms.Label();
             this.LabelVerbleibeneZeit = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
@@ -308,6 +309,11 @@
             this.LabelVerbleibeneZeit.TabIndex = 2;
             this.LabelVerbleibeneZeit.Text = "beanspruchte Zeit:";
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +367,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label LabelTimer;
         private System.Windows.Forms.Label LabelVerbleibeneZeit;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

@@ -18,12 +18,15 @@ namespace VergleichsSpiel
         PictureBox secondClicked;
 
         int timeUsed = 0;
+        TimeSpan benutzteZeit = new TimeSpan();
+
         public Form1()
         {
             InitializeComponent();
             AssignIconsToSquares();
 
-            LabelTimer.Text = timeUsed.ToString();
+            benutzteZeit = TimeSpan.FromSeconds(timeUsed);
+            LabelTimer.Text = string.Format("{0:D2}:{1:D2}", benutzteZeit.Minutes, benutzteZeit.Seconds);
         }
         // Zufallszahl um später zufällige Objekte zu wählen
         Random random = new Random();
@@ -94,9 +97,11 @@ namespace VergleichsSpiel
             }
         }
 
-        // 
+        // Deckt Felder durch anklicken auf
         private void PictureBoxClicked(object sender, EventArgs e)
         {
+            timer2.Enabled = true;
+
             string iconId;
             // Wenn Timer1 läuft, wird returned
             if (timer1.Enabled)
@@ -138,7 +143,7 @@ namespace VergleichsSpiel
                 timer1.Start();
             }   
         }
-        // Noch anpassen, zweiten Timer einfügen
+        // Dreht die Felder wieder um, nach Intervall Zeit
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -150,10 +155,6 @@ namespace VergleichsSpiel
                 firstClicked = null;
                 secondClicked = null;
             }
-
-            TimeSpan benutzteZeit = TimeSpan.FromSeconds(timeUsed);
-            LabelTimer.Text = string.Format("{0:D2}:{1:D2}", benutzteZeit.Minutes, benutzteZeit.Seconds);
-            timeUsed += 1;
         }
 
         // Die Funktion checkt ob das Spiel gewonnnen wurde
@@ -167,8 +168,16 @@ namespace VergleichsSpiel
                     return;
             }
 
-            MessageBox.Show("Du hast gewonnen, herzlichsten Glühstrumpf!!!");
+            timer2.Enabled = false;
+            MessageBox.Show($"Du hast gewonnen und hast {benutzteZeit.Minutes} Minuten und {benutzteZeit.Seconds} Sekunden gebraucht, herzlichsten Glühstrumpf!!!");
             Close();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timeUsed++;
+            benutzteZeit = TimeSpan.FromSeconds(timeUsed);
+            LabelTimer.Text = string.Format("{0:D2}:{1:D2}", benutzteZeit.Minutes, benutzteZeit.Seconds);
         }
     } 
 }

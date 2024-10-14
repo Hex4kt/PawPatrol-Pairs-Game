@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatheQuiz", "MatheQuiz\Math
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayZLauncher", "DayZLauncher\DayZLauncher.csproj", "{37775F77-FCC2-41B1-B692-4E4B0D2B0282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VergleichsSpiel", "VergleichsSpiel\VergleichsSpiel.csproj", "{5E458112-FADE-4D59-92D1-CABE28519D53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawPatrolMemory", "VergleichsSpiel\PawPatrolMemory.csproj", "{5E458112-FADE-4D59-92D1-CABE28519D53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
