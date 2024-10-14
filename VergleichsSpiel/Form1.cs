@@ -22,6 +22,8 @@ namespace VergleichsSpiel
         {
             InitializeComponent();
             AssignIconsToSquares();
+
+            LabelTimer.Text = timeUsed.ToString();
         }
         // Zufallszahl um später zufällige Objekte zu wählen
         Random random = new Random();
