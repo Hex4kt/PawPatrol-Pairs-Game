@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureVie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatheQuiz", "MatheQuiz\MatheQuiz.csproj", "{6CFD2714-E84D-4341-BC13-036DB94A8C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayZLauncher", "DayZLauncher\DayZLauncher.csproj", "{37775F77-FCC2-41B1-B692-4E4B0D2B0282}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawPatrolMemory", "VergleichsSpiel\PawPatrolMemory.csproj", "{5E458112-FADE-4D59-92D1-CABE28519D53}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{6CFD2714-E84D-4341-BC13-036DB94A8C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CFD2714-E84D-4341-BC13-036DB94A8C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CFD2714-E84D-4341-BC13-036DB94A8C12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37775F77-FCC2-41B1-B692-4E4B0D2B0282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37775F77-FCC2-41B1-B692-4E4B0D2B0282}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37775F77-FCC2-41B1-B692-4E4B0D2B0282}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37775F77-FCC2-41B1-B692-4E4B0D2B0282}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E458112-FADE-4D59-92D1-CABE28519D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E458112-FADE-4D59-92D1-CABE28519D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E458112-FADE-4D59-92D1-CABE28519D53}.Release|Any CPU.ActiveCfg = Release|Any CPU

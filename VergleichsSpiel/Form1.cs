@@ -17,6 +17,10 @@ namespace VergleichsSpiel
         PictureBox firstClicked;
         PictureBox secondClicked;
 
+        SoundManager soundGoal = new SoundManager("Goal");
+        SoundManager soundWin = new SoundManager("Win");
+        SoundManager soundWrong = new SoundManager("Wrong");
+
         int timeUsed = 0;
         TimeSpan benutzteZeit = new TimeSpan();
 
@@ -101,13 +105,11 @@ namespace VergleichsSpiel
         private void PictureBoxClicked(object sender, EventArgs e)
         {
             timer2.Enabled = true;
-
             string iconId;
+
             // Wenn Timer1 läuft, wird returned
             if (timer1.Enabled)
-            {
                 return;
-            }
 
             PictureBox clickedPicture = sender as PictureBox;
 
@@ -118,7 +120,7 @@ namespace VergleichsSpiel
 
                 if (firstClicked == null)
                 {
-                    // Zeigt das versteckte Bild an
+                    // Zeigt das erste versteckte Bild an
                     iconId = iconMapping[clickedPicture];
                     firstClicked = clickedPicture;
                     firstClicked.Image = GetIconById(iconId); // Zeigt das passende Icon an
@@ -126,20 +128,26 @@ namespace VergleichsSpiel
                     return;
                 }
 
+                // Zeigt das zweite versteckte Bild an
                 iconId = iconMapping[clickedPicture];
                 secondClicked = clickedPicture;
                 secondClicked.Image = GetIconById(iconId);
                 secondClicked.SizeMode = PictureBoxSizeMode.Zoom;
 
+                // Überprüft ob alle Felder aufgedeckt wurden
                 CheckForWin();
 
+                // Wenn beide Felder übereinstimmen, dann wird Timer1 nicht gestartet = beide Felder bleiben aufgedeckt
                 if (iconMapping[firstClicked] == iconMapping[secondClicked])
                 {
                     firstClicked = null;
                     secondClicked = null;
+                    soundGoal.Play();
                     return;
                 }
 
+                // Wenn Felder nicht übereinstimmten, wird timer1 gestartet
+                soundWrong.Play();
                 timer1.Start();
             }   
         }
@@ -169,6 +177,7 @@ namespace VergleichsSpiel
             }
 
             timer2.Enabled = false;
+            soundWin.Play();
             MessageBox.Show($"Du hast gewonnen und hast {benutzteZeit.Minutes} Minuten und {benutzteZeit.Seconds} Sekunden gebraucht, herzlichsten Glühstrumpf!!!");
             Close();
         }
