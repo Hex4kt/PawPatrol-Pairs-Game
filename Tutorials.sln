@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureVie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatheQuiz", "MatheQuiz\MatheQuiz.csproj", "{6CFD2714-E84D-4341-BC13-036DB94A8C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawPatrolMemory", "VergleichsSpiel\PawPatrolMemory.csproj", "{5E458112-FADE-4D59-92D1-CABE28519D53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawPatrolMemory", "PawPatrolMemory\PawPatrolMemory.csproj", "{5E458112-FADE-4D59-92D1-CABE28519D53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
