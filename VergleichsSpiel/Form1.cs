@@ -158,6 +158,8 @@ namespace VergleichsSpiel
             // Verbirgt die Icons nach der Verzögerung (Intervall)
             if (firstClicked != null && secondClicked != null)
             {
+                firstClicked.Image.Dispose();
+                secondClicked.Image.Dispose();
                 firstClicked.Image = null;
                 secondClicked.Image = null;
                 firstClicked = null;
