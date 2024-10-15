@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureViewer\PictureViewer.csproj", "{F30697EB-537B-4055-B806-4DB6C75C2D48}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatheQuiz", "MatheQuiz\MatheQuiz.csproj", "{6CFD2714-E84D-4341-BC13-036DB94A8C12}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawPatrolMemory", "PawPatrolMemory\PawPatrolMemory.csproj", "{5E458112-FADE-4D59-92D1-CABE28519D53}"
 EndProject
 Global
@@ -15,14 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F30697EB-537B-4055-B806-4DB6C75C2D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F30697EB-537B-4055-B806-4DB6C75C2D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F30697EB-537B-4055-B806-4DB6C75C2D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F30697EB-537B-4055-B806-4DB6C75C2D48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CFD2714-E84D-4341-BC13-036DB94A8C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CFD2714-E84D-4341-BC13-036DB94A8C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CFD2714-E84D-4341-BC13-036DB94A8C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CFD2714-E84D-4341-BC13-036DB94A8C12}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E458112-FADE-4D59-92D1-CABE28519D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E458112-FADE-4D59-92D1-CABE28519D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E458112-FADE-4D59-92D1-CABE28519D53}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -97,7 +97,7 @@ namespace PawPatrol
                     return Image.FromFile(Path.Combine(_appPath, "Icons", "zuma.ico"));
 
                 case "8":
-                    return Image.FromFile(Path.Combine(_appPath, "Icons", "Bloodrage.ico"));
+                    return Image.FromFile(Path.Combine(_appPath, "Icons", "marshall.ico"));
 
                 default:
                     return null;
@@ -183,7 +183,7 @@ namespace PawPatrol
 
             timer2.Enabled = false;
             soundWin.Play();
-            MessageBox.Show($"Du hast gewonnen und hast {benutzteZeit.Minutes} Minuten und {benutzteZeit.Seconds} Sekunden gebraucht, herzlichsten Glühstrumpf!!!");
+            MessageBox.Show($"Du hast gewonnen und hast {benutzteZeit.Minutes} Minuten und {benutzteZeit.Seconds} Sekunden gebraucht, herzlichen Glückwunsch!!!");
             Close();
         }
 
