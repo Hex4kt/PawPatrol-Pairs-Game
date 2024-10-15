@@ -1,11 +1,5 @@
-Beinhaltet mehrere kleinere Programem 
+Dieses Projekt ist ein kleines klassisches Memorie Spiel erstellt in C# mit WinForms in .NET
 
-1. um Bilder zu öffnen:
+unter Realease könnt ihr euch das fertige Spiel kostenlos herunterladen.
 
-![Unbenannt](https://github.com/user-attachments/assets/f5c4cc9e-dad2-4634-b5c7-d66abf105611)
-
-2. Paw Patrol Vergleichsspiel:
-
-![image](https://github.com/user-attachments/assets/5f5331b0-0773-4a1c-a181-1bd81f3f9349)
-
-
+![image](https://github.com/user-attachments/assets/9c6edb71-9382-4d28-af19-1058a9a4329b)
